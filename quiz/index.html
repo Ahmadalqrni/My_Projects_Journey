@@ -60,6 +60,7 @@
             <h1>Quiz</h1>
             <div class="qeustion_box">
                 <p id="qeustion"></p>
+                <p>score point: <span id="scorenumber">0</span></p>
                 <ul>
                     <li><button id="answer1" onclick="a(this)"></button></li>
                     <li><button id="answer2" onclick="a(this)"></button></li>
@@ -76,43 +77,18 @@
             let randomlist = [1, 2, 3];
             let randomIndex = Math.floor(Math.random() * randomlist.length);
             let random = randomlist[randomIndex];
+
             let qeustion = document.getElementById("qeustion")
+
             let answer1 = document.getElementById("answer1")
             let answer2 = document.getElementById("answer2")
             let answer3 = document.getElementById("answer3")
             let answer4 = document.getElementById("answer4")
 
-            if(random === 1){
-                qeustion.textContent = 'what is 5 + 5';
-                answer1.textContent = '10'
-                answer2.textContent = '3'
-                answer3.textContent = '11'
-                answer4.textContent = '6'
-                answer1.dataset.correct = "true";
-                
-            }else if( random === 2){
-                qeustion.textContent = 'what is 5 + 1';
-                answer1.textContent = '12'
-                answer2.textContent = '3'
-                answer3.textContent = '1'
-                answer4.textContent = '6'
-                answer4.dataset.correct = "true"; 
-            }else if( random === 3){
-                qeustion.textContent = 'what is 5 + 4';
-                answer1.textContent = '1'
-                answer2.textContent = '8'
-                answer3.textContent = '9'
-                answer4.textContent = '5'
-                answer3.dataset.correct = "true";
-            }
-            /* 
-            i need when click on this thing should give me the right answer base of this question
-            example if random was 1 right answer should be 10
-            1-test
-            let answer = false 
-            if answer was let say 10 than answer = true else answer stay false 
-            how to make the moment i pick answer 10 he say good
-            */
+            let scorenumber = document.getElementById("scorenumber")
+            
+
+
            function loadQuestion() {
             [answer1, answer2, answer3, answer4].forEach(btn => {
                 btn.style.backgroundColor = "";
@@ -147,23 +123,61 @@
                 answer3.dataset.correct = "true";
                 }
             }
+            loadQuestion();
+
 
             function a(button){
+                answer1.disabled = true;
+                answer2.disabled = true;
+                answer3.disabled = true;
+                answer4.disabled = true;
                 if (button.dataset.correct === 'true'){
                     button.style.backgroundColor = "green";
+                    scorenumber.textContent = parseInt(scorenumber.textContent) + 5;
+
                 }else{
                     button.style.backgroundColor = "red";
-                }
-            }
-              function next() {
-             randomlist.splice(randomIndex, 1);
-                if (randomlist.length === 0) {
-                    qeustion.textContent = "Quiz Finished 🎉";
-                return;
+                    
                 }
 
-                loadQuestion();
             }
+              function next() {
+                randomlist.splice(randomIndex, 1);
+                if (randomlist.length === 0) {
+                    let finalScore = parseInt(scorenumber.textContent);
+                    let gifUrl;
+                    
+                    // Assign GIF based on score
+                    if (finalScore >= 10) {
+                        gifUrl = "gif_img/happy.gif";   // Good job!
+                    } else {
+                        gifUrl = "gif_img/sad.gif";     // Try again
+                    }
+                    
+                    qeustion.textContent = "Quiz Finished 🎉";
+                    scorenumber.textContent = "Final Score: " + finalScore;
+                    
+                    // Add GIF
+                    let gifElement = document.createElement("img");
+                    gifElement.src = gifUrl;
+                    gifElement.style.width = "200px";
+                    gifElement.style.marginTop = "10px";
+                    document.querySelector(".qeustion_box").appendChild(gifElement);
+                    
+                    answer1.style.display = "none";
+                    answer2.style.display = "none";
+                    answer3.style.display = "none";
+                    answer4.style.display = "none";
+                    document.getElementById("next").style.display = "none";
+                    return;
+                }
+                loadQuestion();
+                answer1.disabled = false;
+                answer2.disabled = false;
+                answer3.disabled = false;
+                answer4.disabled = false;
+            }
+
           
         </script>
     </body>
