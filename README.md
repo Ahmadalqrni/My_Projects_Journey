@@ -10,7 +10,7 @@
 * [x] 🌐 **Day 2** — Responsive Landing Page
 * [x] 🧮 **Day 3** — Calculator App
 * [x] 📝 **Day 4** — To‑Do List
-* [ ] 🎨 **Day 5** — Color Generator
+* [x] 🎨 **Day 5** — Color Generator
 * [ ] ❓ **Day 6** — Simple Quiz App
 * [ ] 📁 **Day 7** — Mini Portfolio
 
