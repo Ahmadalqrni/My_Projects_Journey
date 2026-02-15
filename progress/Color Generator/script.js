@@ -8,5 +8,11 @@ function randomcolor() {
 }
 
 colorbutton.addEventListener("click", () => {
+<<<<<<< HEAD
   document.body.style.backgroundColor = randomcolor();
 });
+=======
+    document.body.style.backgroundColor = randomcolor();
+})
+
+>>>>>>> 3013deef548c1b04deb37c34e132ea32bde8ec3b
