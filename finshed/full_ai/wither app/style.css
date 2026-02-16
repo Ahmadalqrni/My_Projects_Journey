@@ -10,7 +10,7 @@ body {
   flex-direction: column;
 }
 #weatherResult {
-  border-radius: 200px;
+  border-radius: 500px;
   background-color: #1e2a44;
   padding: 20px;
   margin-bottom: 30px;

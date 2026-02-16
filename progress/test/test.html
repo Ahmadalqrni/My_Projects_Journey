@@ -1,11 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <input type="text" name="" id="">
-</body>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Fetch Example</title>
+    </head>
+    <body>
+
+        <p id="test">Loading...</p>
+
+        <script>
+    const test = document.getElementById("test");
+
+    fetch("https://pokeapi.co/api/v2/pokemon/ditto")
+      .then(response => {
+        if(!response.ok)
+        {
+        throw new Error('nigga pls');
+      }
+      return response.json
+    })
+      
+      .then(data => test.textContent = data.id )
+      .catch(error => test.textContent = "Error: " + error.message);  
+   
+  </script>
+
+    </body>
 </html>
