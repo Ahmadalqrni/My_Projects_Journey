@@ -19,7 +19,7 @@
 
 ## 🟢 LEVEL 2 — JavaScript + APIs
 
-- [ ] 🌦️ **Day 8** — Weather App (API)
+- [x] 🌦️ **Day 8** — Weather App (API)
 - [ ] 💱 **Day 9** — Currency Converter
 - [ ] 💬 **Day 10** — Random Quote Generator
 - [ ] 🖼️ **Day 11** — Image Search App
@@ -27,7 +27,7 @@
 - [ ] ⏱️ **Day 14** — Stopwatch / Timer
 - [ ] 🗒️ **Day 15** — Notes App
 
-🟨 Progress: **0 / 7 completed**
+🟨 Progress: **1 / 7 completed**
 
 ---
 
