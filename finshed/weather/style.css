@@ -39,6 +39,7 @@ header {
   border: 1px solid transparent;
   border-top: 5px solid white;
   opacity: 0;
+  pointer-events: none;
 }
 
 .Weather-box.active::before {
@@ -65,7 +66,7 @@ header {
   color: #fff;
   outline: none;
 }
-.Weather-box button {
+button {
   padding: 10px 20px;
   border-radius: 8px;
   border: 0.5px solid white;
@@ -75,7 +76,7 @@ header {
   margin-left: 10px;
 }
 
-.Weather-box button:hover {
+button:hover {
   background: #1a263d;
   border-color: #fff;
 }
