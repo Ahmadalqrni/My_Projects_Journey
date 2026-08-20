@@ -52,4 +52,25 @@
 - [x] 👤 **Day 26** — User Registration API
 - [x] 🔑 **Day 27** — Login + JWT
 - [x] 🧾 **Day 28** — CRUD App with Database
-- [x] 🏗️
+- [x] 🏗️ **Day 29–31** — Big Project #1 *(Study With Me — Pomodoro app)*
+- [ ] 🏗️ **Day 32–34** — Big Project #2
+
+🟪 Progress: **5 / 6 completed**
+
+---
+
+## 🔥 LEVEL 5 — Polish & Professional
+
+- [ ] 🛡️ **Day 35** — Error Handling & Validation
+- [ ] 🔍 **Day 36** — Pagination & Search
+- [x] ☁️ **Day 37** — Deploy (Vercel / Render)
+- [ ] 🎨 **Day 38** — UI & UX Improvements
+- [ ] 🧹 **Day 39** — Refactor Code
+- [ ] 📌 **Day 40** — Final Portfolio + README
+
+🟥 Progress: **1 / 6 completed**
+
+---
+
+✨ **Rule:** Every project is refactored before being marked complete.
+📈 **Goal:** From beginner → professional full-stack engineer.
